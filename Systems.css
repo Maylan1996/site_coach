@@ -1,0 +1,144 @@
+#navbar {
+  font-size: 50px;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #424874;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  color: #f4eeff;
+}
+
+#navbar-list {
+  display: flex;
+}
+
+#navbar-list li {
+  margin: 0px 20px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #f4eeff;
+}
+
+#Home {
+  font-size: 65px;
+  position: relative;
+}
+
+#Home::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: -6px;
+  height: 3px;
+  left: 0;
+  background-color: #f4eeff;
+  transform-origin: 100% 100%;
+  transition: 0.7s;
+  transform: scale(0);
+}
+
+#Home:hover::after {
+  transform: scale(1);
+}
+
+#navbar li {
+  position: relative;
+}
+
+#navbar li::after {
+  position: absolute;
+  content: "";
+  bottom: -6px;
+  height: 3px;
+  left: 0;
+  background-color: #f4eeff;
+  width: 100%;
+  transform-origin: 0% 100%;
+  transition: 0.7s;
+  transform: scaleX(0);
+}
+
+#navbar li:hover::after {
+  transform: scaleX(1);
+}
+
+h1 {
+  width: max-content;
+  font-size: 90px;
+  color: #424874;
+  position: relative;
+  margin: 80px auto;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 5px;
+  background-color: #424874;
+  width: 100%;
+  left: 0;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+}
+
+h1:hover::after {
+  transform: scaleX(1);
+}
+
+body {
+  background-color: #dcd6f7;
+  height: 100vh;
+}
+
+.tableau {
+  margin: 150px auto;
+  border: 1px solid;
+  box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.15);
+  background-color: #f4eeff;
+}
+
+th,
+td {
+  padding: 25px 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 38px;
+}
+
+.tableau img {
+  width: 150px;
+  height: 150px;
+}
+
+td,
+th {
+  border: solid 2px #424874;
+  color: #424874;
+}
+
+td:nth-child(even) {
+  background-color: #f4eeff;
+}
+
+th {
+  color: #424874;
+  background-color: #f4eeff;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+td:first-of-type,
+th:first-of-type {
+  color: #424874;
+  font-weight: bold;
+  background-color: #f4eeff;
+  font-style: italic;
+  font-size: 48px;
+  text-decoration: underline;
+}
