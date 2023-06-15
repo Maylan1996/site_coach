@@ -1,5 +1,7 @@
 body {
   font-family: "Rosario", sans-serif;
+  background-color: #dcd6f7;
+  height: 100vh;
 }
 
 #navbar {
@@ -20,6 +22,24 @@ body {
 
 #navbar-list li {
   margin: 0px 20px;
+  position: relative;
+}
+
+#navbar li::after {
+  position: absolute;
+  content: "";
+  bottom: -6px;
+  height: 3px;
+  left: 0;
+  background-color: #f4eeff;
+  width: 100%;
+  transform-origin: 0% 100%;
+  transition: 0.7s;
+  transform: scaleX(0);
+}
+
+#navbar li:hover::after {
+  transform: scaleX(1);
 }
 
 #navbar a {
@@ -47,27 +67,6 @@ body {
 
 #Home:hover::after {
   transform: scale(1);
-}
-
-#navbar li {
-  position: relative;
-}
-
-#navbar li::after {
-  position: absolute;
-  content: "";
-  bottom: -6px;
-  height: 3px;
-  left: 0;
-  background-color: #f4eeff;
-  width: 100%;
-  transform-origin: 0% 100%;
-  transition: 0.7s;
-  transform: scaleX(0);
-}
-
-#navbar li:hover::after {
-  transform: scaleX(1);
 }
 
 h1 {
